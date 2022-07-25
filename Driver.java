@@ -1,19 +1,16 @@
-package com.jitesh.treesum;
-
+package com.jitesh.main;
+import com.jitesh.service.*;
 public class Driver {
-	public static void main (String []args) {
-		Node root = null;
-		FindSumPair findSP = new FindSumPair();
-		root = findSP.insert(root,40);
-		root = findSP.insert(root,20);
-		root = findSP.insert(root,60);
-		root = findSP.insert(root,10);
-		root = findSP.insert(root,30);
-		root = findSP.insert(root,50);
-		root = findSP.insert(root,70);
-		
-		int sum = 130;
-		findSP.findPairWithGivenSum(root,sum);
-	}
-
+      public static void main(String[]args) {
+    	  BalancingBrackets balancingBrackets = new BalancingBrackets();
+    	  String bracketExpression = "([[{}]])";
+    	  
+    	  boolean result;
+    	  result = balancingBrackets.checkingBracketsBalanced(bracketExpression);
+    	  
+    	  if(result)
+    		  System.out.println("The entered String has Balanced Brackets");
+    	  else
+    		  System.out.println("The entered String do not contain Balanced Brackets");
+      }
 }
